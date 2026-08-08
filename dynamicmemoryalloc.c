@@ -10,7 +10,13 @@ int main(){int base = 1;
         base++;
     }
     for(int i=0;i<5;i++){
-    printf("%d",arr[i]);}
-    free(arr);
+    printf("%d ",arr[i]);}
+    arr = realloc(arr,7*sizeof(int));
+    for(int i=0;i<=6;i++){
+        arr[i] = base;
+        base++;
+    }
+    for(int i=0;i<=6;i++){
+    printf("\n%d ",arr[i]);}
     return 0;
 }
